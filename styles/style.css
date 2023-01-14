@@ -35,7 +35,8 @@ main {
 .container {
     font-family: var(--font-poppins);
     background-color: var(--section-color);
-    width: 870px;
+    max-width: 870px;
+    width: 100%;
     padding: 30px;
     margin-top: 20px;
     border-radius: 5px;
@@ -143,4 +144,18 @@ hr {
     background-color: var(--course-time-background);
     border-radius: 12px;
     color: var(--course-time-color);
+}
+
+/* Media Queries */
+/* Mobile Device */
+@media only screen and (max-width: 688px) {
+    .players, .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    .courses{
+        justify-items: center;
+    }
 }
