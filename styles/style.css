@@ -4,10 +4,15 @@
 :root {
     --main-color: #562EFF;
     --primary-color: #000000;
-    --secondary-color: #ED6B4F;
     --main-body-color: #F3F1FF;
     --section-color: #FFFFFF;
     --user-by-color: #9F9F9F;
+    --course-author-color:#ED6B4F;
+    --course-time-background:#FFE4E8;
+    --course-time-color:#FF4A60;
+    --course-star-color:#FFC014;
+    --course-star-empty-color: #AEAEAE;
+    --course-rating-color:#A2A2A2;
     --player-font-size: 18px;
     --main-header-font: 24px;
     --title-font-size: 20px;
@@ -110,3 +115,32 @@ hr {
 }
 
 /* Courses style */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+.course .course-banner img {
+    width: 255px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: var(--course-star-color);
+}
+.fa-star.empty{
+    color: var(--course-star-empty-color);
+    opacity: 0.25;
+}
+.course-duration{
+    background-color: var(--course-time-background);
+    border-radius: 12px;
+    color: var(--course-time-color);
+}
